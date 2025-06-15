@@ -23,3 +23,6 @@ class Teacher(User):
         teacher.id = data.get("id", teacher.id)  #just like user class
         teacher.subjects = data.get("subjects", [])
         return teacher
+    
+    def __repr__(self):
+        return f"<Teacher {self.username} & Subjects: {len(self.subjects)}>"

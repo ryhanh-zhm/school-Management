@@ -46,7 +46,9 @@ class User:
         )
         user.id = data.get("id", user.id) # To avoid generating a new ID each time, the previous ID will be used if it already exists.
         return user
-
+    
+    def __repr__(self):
+        return f"<User {self.username} ({self.role})>"
 
 # Uuid and classmethods has been tought in our advnaced class.
 # The hex() function in Python is used to convert an integer to its hexadecimal representation. The function returns a string that starts with the prefix "0x" followed by the hexadecimal value.
